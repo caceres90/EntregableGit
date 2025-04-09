@@ -1,0 +1,48 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: npm install -g html-validate
+
+      - name: Validar HTML
+        run: html-validate index.html
+
+  validate-css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Instalar stylelint y configuración básica
+        run: |
+          npm install -g stylelint stylelint-config-standard
+          echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+
+      - name: Validar CSS
+        run: stylelint "**/*.css"
+
+  deploy:
+    needs: [validate-html, validate-css]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Publicar en Github Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
