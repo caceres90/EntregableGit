@@ -3,33 +3,67 @@
 <head>
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechStore - Computadoras</title>
+  <title>AssemblyCode</title>
   <link rel="stylesheet" href="style/estilo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+  crossorigin="anonymous">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>TechStore</h1>
+      <h1>AssemblyCode</h1>
       <nav>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Categorías</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Tu tienda de computadoras confiable</h2>
-      <p>Encuentra laptops, PCs, accesorios y mucho más.</p>
-      <br>
-      <a href="#" class="btn">Ver Productos</a>
-    </div>
-  </section>
+  <div class="container">
 
+    <div id="carouselExampleDark" class="carousel text-white slide w-75 m-auto pt-5">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="assets/img/Radeon.avif" class="d-block w-100 m-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="assets/img/Nvidia.jpg" class="d-block w-100 m-auto" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/Intel-Core-Ultra.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+  
   <section class="products">
     <div class="container">
       <h2>Productos Destacados</h2>
@@ -58,7 +92,7 @@
 
   <section class="categories">
     <div class="container">
-      <h2>Categorías</h2>
+      <h2>Proximas categorías</h2>
       <div class="category-grid">
         <div class="category-card">Laptops</div>
         <div class="category-card">PCs</div>
@@ -68,10 +102,43 @@
     </div>
   </section>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-8 m-auto">
+  <div class="card rounded-5 mt-5">
+
+    <section class="contacto m-5" id="contacto">
+            
+            <h2>Categorías</h2>
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <textarea class="form-control" id="exampleInputTextarea1"></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>    
+  </div>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 TechStore. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+crossorigin="anonymous"></script>
 </html>
