@@ -35,6 +35,8 @@ jobs:
   deploy:
     needs: [validate-html, validate-css]
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     permissions:
       pages: write
       id-token: write
@@ -52,3 +54,4 @@ jobs:
 
       - name: Desplegar en GitHub Pages
         uses: actions/deploy-pages@v4
+
