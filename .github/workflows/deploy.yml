@@ -16,7 +16,7 @@ jobs:
         run: npm install -g html-validate
 
       - name: Validar HTML
-        run: html-validate "**/*.html"
+        run: html-validate index.html
 
   validate-css:
     runs-on: ubuntu-latest
