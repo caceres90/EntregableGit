@@ -30,7 +30,7 @@ jobs:
           echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
 
       - name: Validar CSS
-        run: stylelint "**/*.css"
+        run: stylelint "**/*.css" --fix
 
   deploy:
     needs: [validate-html, validate-css]
